@@ -11,8 +11,11 @@ def word(request):
     antonym=dictionary.antonym(search)
     context={
         'meaning': meaning['Noun'] [0:4],
-        'synonym': synonym,
-        'antonym': antonym
+        'synonym': synonym [0:11],
+        'antonym': antonym [0:11]
     }
 
     return render(request, 'word.html', context)
+
+def commingsoon(request):
+    return render(request, 'comingsoon.html', {})
